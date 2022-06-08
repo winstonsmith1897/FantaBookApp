@@ -8,5 +8,5 @@ Users can then use a ”like” system to convey their feelings about players an
 eventually add them to their favorites. They can also follow other users to get
 recommendations for players and squads they might enjoy.
 
-#TransferMarket Scraper 
+TransferMarket Scraper 
 ===> transfermarket_final.py
