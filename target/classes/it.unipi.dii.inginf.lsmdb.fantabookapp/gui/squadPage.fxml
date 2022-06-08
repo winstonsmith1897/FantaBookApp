@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="it.unipi.dii.inginf.lsmdb.fantabookapp.frontend.gui.SquadPageController">
+
+    <stylesheets>
+        <URL value="@default.css"/>
+    </stylesheets>
+    <fx:include source="FXML_utility/search_bar.fxml"/>
+    <fx:include source="FXML_utility/side_menu.fxml"/>
+    <AnchorPane layoutX="147.0" layoutY="69.0" prefHeight="800.0" prefWidth="1300.0" AnchorPane.leftAnchor="160.0"
+                AnchorPane.topAnchor="70.0">
+        <AnchorPane prefHeight="244.0" prefWidth="946.0" AnchorPane.leftAnchor="20.0">
+            <HBox AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="10.0">
+                <ImageView id="imageSquad" fx:id="imageSquad" fitHeight="328.0" fitWidth="310.0"
+                           pickOnBounds="true" preserveRatio="true"/>
+                <VBox alignment="BASELINE_CENTER" layoutX="517.0" layoutY="24.0" prefHeight="200.0"
+                      prefWidth="570.0" spacing="20.0" AnchorPane.leftAnchor="517.0">
+                    <HBox.margin>
+                        <Insets left="50.0" top="20.0"/>
+                    </HBox.margin>
+                    <HBox alignment="CENTER" prefHeight="57.0" prefWidth="480.0">
+                        <TextField fx:id="nameText" editable="false" minWidth="500"/>
+                        <ImageView fx:id="modifyImage" fitHeight="24.0" fitWidth="24.0"
+                                   pickOnBounds="true" preserveRatio="true"
+                                   style="-fx-cursor: hand;" visible="false">
+                            <Image url="@./img/modify.png"/>
+                        </ImageView>
+                        <ImageView fx:id="binImage" fitHeight="24.0" fitWidth="24.0"
+                                   pickOnBounds="true" preserveRatio="true"
+                                   style="-fx-cursor: hand;" visible="false">
+                            <HBox.margin>
+                                <Insets left="20.0"/>
+                            </HBox.margin>
+                            <Image url="@./img/delete.png"/>
+                        </ImageView>
+                    </HBox>
+                    <Label fx:id="ownerText" text="Created by a">
+                        <cursor>
+                            <Cursor fx:constant="HAND"/>
+                        </cursor>
+                    </Label>
+                </VBox>
+            </HBox>
+        </AnchorPane>
+        <AnchorPane layoutY="352.0" prefHeight="462.0" prefWidth="1218.0" AnchorPane.leftAnchor="40.0"
+                    AnchorPane.topAnchor="400.0">
+            <VBox layoutY="-101.0" prefHeight="552.0" prefWidth="1128.0"
+                  style="-fx-background-color: transparent;">
+                <HBox prefHeight="31.0" prefWidth="1211.0" style="-fx-background-color: transparent;">
+                    <VBox.margin>
+                        <Insets top="30.0"/>
+                    </VBox.margin>
+                    <Label alignment="CENTER" prefHeight="26.0" prefWidth="390.0" text="Title">
+                        <HBox.margin>
+                            <Insets left="120.0"/>
+                        </HBox.margin>
+                    </Label>
+                    <Label alignment="CENTER" prefHeight="26.0" prefWidth="495.0" text="Artist"/>
+                </HBox>
+                <ScrollPane prefHeight="312.0" prefWidth="1150.0"
+                            style="-fx-background-color: transparent;">
+                    <VBox fx:id="PlayerListBox" alignment="CENTER" prefHeight="426.0" prefWidth="943.0"
+                          style="-fx-background-color: transparent;"/>
+                </ScrollPane>
+            </VBox>
+        </AnchorPane>
+    </AnchorPane>
+</AnchorPane>

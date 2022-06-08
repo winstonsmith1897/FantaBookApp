@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1220.0" styleClass="root" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unipi.dii.inginf.lsmdb.fantabookapp.frontend.gui.PlayerPageController">
+    <stylesheets>
+        <URL value="@default.css" />
+    </stylesheets>
+    <fx:include source="FXML_utility/search_bar.fxml" />
+    <fx:include source="FXML_utility/side_menu.fxml" />
+    <AnchorPane layoutX="147.0" layoutY="50.0" prefHeight="800.0" prefWidth="1300.0" AnchorPane.leftAnchor="160.0" AnchorPane.topAnchor="70.0">
+        <AnchorPane layoutY="-21.0" prefHeight="200.0" prefWidth="837.0" AnchorPane.leftAnchor="20.0">
+            <HBox layoutX="14.0" layoutY="24.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="24.0">
+                <ImageView fx:id="imagePlayer" fitHeight="199.0" fitWidth="240.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@./img/empty.jpg" />
+                </ImageView>
+                <VBox layoutX="517.0" layoutY="24.0" prefHeight="1347.0" prefWidth="532.0" spacing="20.0" AnchorPane.leftAnchor="517.0">
+                    <HBox.margin>
+                        <Insets left="50.0" top="20.0" />
+                    </HBox.margin>
+                    <TextField fx:id="valueText" editable="false" minWidth="126.0" prefHeight="16.0" prefWidth="352.0" promptText="28">
+                        <font>
+                            <Font size="6.0" />
+                        </font>
+                    </TextField>
+                    <TextField fx:id="minuteText" editable="false" minWidth="118.0" prefHeight="16.0" prefWidth="352.0" promptText="28">
+                        <font>
+                            <Font size="6.0" />
+                        </font>
+                    </TextField>
+                    <TextField fx:id="NationalityText" editable="false" promptText="italy">
+                        <font>
+                            <Font size="6.0" />
+                        </font>
+                    </TextField>
+                    <TextField fx:id="goalText" editable="false" maxWidth="480.0" minWidth="41.0" prefHeight="15.0" prefWidth="182.0" promptText="28">
+                        <font>
+                            <Font size="7.0" />
+                        </font>
+                    </TextField>
+                    <TextField fx:id="positionText" editable="false" minWidth="480.0" promptText="midfielder">
+                        <font>
+                            <Font size="10.0" />
+                        </font>
+                    </TextField>
+                    <ButtonBar prefHeight="0.0" prefWidth="654.0" />
+                </VBox>
+            </HBox>
+            <TextField fx:id="nameText" alignment="CENTER" editable="false" layoutX="370.0" layoutY="1.0" maxWidth="352.0" minWidth="0.0" prefHeight="58.0" prefWidth="352.0" promptText="DybalaDybalaDybala" style="-fx-font-size: 2em;">
+                <font>
+                    <Font name="Arial" size="6.0" />
+                </font>
+            </TextField>
+            <TextField fx:id="NumberText" alignment="CENTER" editable="false" layoutX="836.0" layoutY="1.0" maxWidth="352.0" minWidth="0.0" prefHeight="6.0" prefWidth="200.0" promptText="10" style="-fx-font-size: 2em;">
+                <font>
+                    <Font name="Arial" size="6.0" />
+                </font>
+            </TextField>
+        </AnchorPane>
+        <AnchorPane prefHeight="400.0" prefWidth="400.0" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="330.0">
+            <children>
+                <VBox prefHeight="169.0" prefWidth="400.0">
+                    <children>
+                        <VBox spacing="20.0">
+                            <children>
+                                <HBox prefHeight="98.0" prefWidth="946.0" spacing="100.0">
+                                    <children>
+                                        <Button fx:id="favouriteButton" minWidth="158.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="234.0" styleClass="player_button">
+                                            <graphic>
+                                                <Label minWidth="-Infinity" prefHeight="50.0" prefWidth="162.0" text="Add to favourite">
+                                                    <graphic>
+                                                        <ImageView fx:id="favouriteImg" fitHeight="24.0" fitWidth="24.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@img/heart.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                    </graphic>
+                                                    <padding>
+                                                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                    </padding>
+                                                </Label>
+                                            </graphic>
+                                            <HBox.margin>
+                                                <Insets top="140.0" />
+                                            </HBox.margin>
+                                        </Button>
+                                        <AnchorPane prefHeight="230.0" prefWidth="253.0">
+                                            <children>
+                                                <Button fx:id="squadButton" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="212.0" styleClass="player_button" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="140.0">
+                                       <graphic>
+                                                      <Label minWidth="160.0" prefHeight="58.0" prefWidth="160.0" text="Add to a squad">
+                                                          <graphic>
+                                                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                                                  <image>
+                                                                      <Image url="@img/plus.png" />
+                                                                  </image>
+                                                              </ImageView>
+                                                          </graphic>
+                                                      </Label>
+                                       </graphic></Button>
+                                                <ScrollPane fx:id="scrollList" hbarPolicy="NEVER" layoutY="30.0" prefViewportHeight="140.0" prefViewportWidth="350.0" vbarPolicy="NEVER" visible="false">
+                                                    <content>
+                                                        <ListView fx:id="SquadList" prefHeight="140.0" prefWidth="350.0" AnchorPane.topAnchor="30.0" />
+                                                    </content>
+                                                </ScrollPane>
+                                                <Button fx:id="closeListButton" mnemonicParsing="false" text="CLOSE" visible="false" AnchorPane.leftAnchor="65.0" AnchorPane.topAnchor="172.0" />
+                                                <Button fx:id="likeButton" layoutX="214.0" layoutY="139.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="87.0" styleClass="player_button">
+                                       <graphic>
+                                                      <Label fx:id="likeLabel" minWidth="-Infinity" prefHeight="48.0" prefWidth="120.0" text="Like">
+                                                          <graphic>
+                                                              <ImageView fx:id="likeImg" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                                                  <image>
+                                                                      <Image url="@img/like.png" />
+                                                                  </image>
+                                                              </ImageView>
+                                                          </graphic>
+                                                      </Label>
+                                       </graphic></Button>
+                                                <TextField fx:id="teamText" editable="false" layoutX="402.0" layoutY="-1.0" maxWidth="318.0" minWidth="25.0" prefHeight="82.0" prefWidth="352.0" promptText="Juventus">
+                                                    <font>
+                                                        <Font size="7.0" />
+                                                    </font>
+                                                </TextField>
+                                                <Label fx:id="ratingLabel" layoutX="402.0" layoutY="137.0" minWidth="-Infinity" prefHeight="39.0" prefWidth="160.0" text="Rating">
+                                                    <graphic>
+                                                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@img/statistic.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                    </graphic>
+                                                </Label>
+                                            </children>
+                                        </AnchorPane>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets top="-240.0" />
+                                    </VBox.margin>
+                                    <padding>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </padding>
+                                </HBox>
+                            </children>
+                            <VBox.margin>
+                                <Insets left="10.0" top="100.0" />
+                            </VBox.margin>
+                        </VBox>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+        <TextField fx:id="assistText" editable="false" layoutX="714.0" layoutY="153.0" maxWidth="234.0" minWidth="234.0" prefHeight="48.0" prefWidth="234.0" promptText="28">
+            <font>
+                <Font size="6.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="redCardText" editable="false" layoutX="714.0" layoutY="113.0" maxWidth="463.0" minWidth="0.0" prefHeight="23.0" prefWidth="182.0" promptText="28">
+            <font>
+                <Font size="6.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="ageText" editable="false" layoutX="714.0" layoutY="62.0" minWidth="0.0" prefHeight="25.0" prefWidth="160.0" promptText="28">
+            <font>
+                <Font size="6.0" />
+            </font>
+        </TextField>
+    </AnchorPane>
+</AnchorPane>
