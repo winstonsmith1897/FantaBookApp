@@ -50,7 +50,6 @@ public class UserDAOImpl implements UserDAO{
                             + user.getFirstName() + " " + user.getLastName()
             );
             squad.setFavourite(true);
-            //squad.setUrlImage("file:src/main/resources/it/unipi/dii/inginf/lsmdb/unimusic/frontend/gui/img/default_squad.jpg");
             SquadDAOImpl squadDAO = new SquadDAOImpl();
             squadDAO.createSquad(squad);
             System.out.println("\n\nSQUAD CREATED\n\n");
