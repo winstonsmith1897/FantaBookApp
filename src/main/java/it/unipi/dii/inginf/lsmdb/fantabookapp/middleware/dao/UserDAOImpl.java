@@ -51,6 +51,7 @@ public class UserDAOImpl implements UserDAO{
             );
             squad.setFavourite(true);
             SquadDAOImpl squadDAO = new SquadDAOImpl();
+            //dserror
             squadDAO.createSquad(squad);
             System.out.println("\n\nSQUAD CREATED\n\n");
             logger.info("Created user <" +user.getUsername()+ ">");
